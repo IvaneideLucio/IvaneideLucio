@@ -1,9 +1,9 @@
 var mongoose = require('mongoose');
 
-var AlunoSchema = new mongoose.Schema({
+var AmostraSchema = new mongoose.Schema({
   nome: String,
   ordem: Number,
-  detalhe: String,
+  detalhe: String
  
   
 });
