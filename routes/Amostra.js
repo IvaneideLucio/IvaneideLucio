@@ -5,9 +5,9 @@ var Amostra = require('../models/Amostra.js');
 
 /* GET /aluno Listagem de alunos. */
 router.get('/', function(req, res, next) {
-  Amostra.find(function (err, aluno) {
+  Amostra.find(function (err, amostra) {
     if (err) return next(err);
-    res.json(aluno);
+    res.json(amostra);
   });
 });
 
