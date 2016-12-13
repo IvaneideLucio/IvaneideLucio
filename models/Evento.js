@@ -3,8 +3,8 @@ var mongoose = require('mongoose');
 var EventoSchema = new mongoose.Schema({
   nome: String,
   descricao: String,
-  dataInicio: String,
-  dataFim: String,
+  dataInicio: Date,
+  dataFim: Date,
   local: String,
   tag: String
   
