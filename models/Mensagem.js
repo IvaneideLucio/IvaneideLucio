@@ -4,7 +4,7 @@ var MensagemSchema = new mongoose.Schema({
   assusnto: String,
   remetente: String,
   destinatario: String,
-  data: Date,
+  data: String,
   mensagem: String,
   classificacao: String
   
