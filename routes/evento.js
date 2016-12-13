@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var Evento = require('../models/Evenot.js');
+var Evento = require('../models/Evento.js');
 
 /* GET /evento Listagem de eventor. */
 router.get('/', function(req, res, next) {
