@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Amostra = require('../models/Amostra.js');
 
-/* GET /aluno Listagem de alunos. */
+/* GET /amostra Listagem de amostrar. */
 router.get('/', function(req, res, next) {
   Amostra.find(function (err, amostra) {
     if (err) return next(err);
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* POST /aluno Cadastro de aluno */
+/* POST /amostra Cadastro de amostra */
 router.post('/', function(req, res, next) {
   Amostra.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* GET /aluno/id  Lista filtrada por um aluno*/
+/* GET /amostra/id  Lista filtrada por um amostra*/
 router.get('/:id', function(req, res, next) {
   Amostra.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -27,7 +27,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* PUT /aluno/:id Salva a edição de aluno */
+/* PUT /amostra/:id Salva a edição de amostra */
 router.put('/:id', function(req, res, next) {
   Amostra.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -35,7 +35,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE /aluno/:id Deletando o perfil a aluno do id */
+/* DELETE /amostra/:id Deletando o perfil a amostra do id */
 router.delete('/:id', function(req, res, next) {
   Amostra.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);

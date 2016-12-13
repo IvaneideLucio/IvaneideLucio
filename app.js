@@ -1,3 +1,5 @@
+/* global evento */
+
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
@@ -9,6 +11,7 @@ var usuario = require('./routes/usuario');
 var perfil = require('./routes/perfil');
 var aluno = require('./routes/aluno');
 var amostra = require('./routes/amostra');
+var amostra = require('./routes/evento');
 
 var mongoose = require('mongoose');
 
@@ -58,6 +61,7 @@ app.use('/usuario', usuario);
 app.use('/perfil', perfil);
 app.use('/aluno', aluno);
 app.use('/amostra', amostra);
+app.use('/evento', evento);
 
 
 
