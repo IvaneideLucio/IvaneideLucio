@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var MensagemSchema = new mongoose.Schema({
-  assusnto: String,
+  assunto: String,
   remetente: String,
   destinatario: String,
   data: String,
