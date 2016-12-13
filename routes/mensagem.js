@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Mensagem = require('../models/Mensagem.js');
 
-/* GET /evento Listagem de eventor. */
+/* GET /mensagem Listagem de mensagens. */
 router.get('/', function(req, res, next) {
   Mensagem.find(function (err, mensagem) {
     if (err) return next(err);
@@ -11,7 +11,7 @@ router.get('/', function(req, res, next) {
   });
 });
 
-/* POST /evento Cadastro de evento */
+/* POST /mensagem Cadastro de mensagem */
 router.post('/', function(req, res, next) {
   Mensagem.create(req.body, function (err, post) {
     if (err) return next(err);
@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
   });
 });
 
-/* GET /evento/id  Lista filtrada por um evento*/
+/* GET /mensagem/id  Lista filtrada por um mensagem*/
 router.get('/:id', function(req, res, next) {
   Mensagem.findById(req.params.id, function (err, post) {
     if (err) return next(err);
@@ -27,7 +27,7 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-/* PUT /evento/:id Salva a edição de evento */
+/* PUT /mensagem/:id Salva a edição de mensagem */
 router.put('/:id', function(req, res, next) {
   Mensagem.findByIdAndUpdate(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
@@ -35,7 +35,7 @@ router.put('/:id', function(req, res, next) {
   });
 });
 
-/* DELETE /evento/:id Deletando o perfil a evento do id */
+/* DELETE /mensagem/:id Deletando o perfil a mensagem do id */
 router.delete('/:id', function(req, res, next) {
   Mensagem.findByIdAndRemove(req.params.id, req.body, function (err, post) {
     if (err) return next(err);
