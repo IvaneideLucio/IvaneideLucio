@@ -5,11 +5,12 @@ var EventoSchema = new mongoose.Schema({
     descricao: String,
     dataInicio: String,
     dataFim: String,
-    tag: String,
     local: String,
+    tag: String,
+    convidados: String,    
     cep: Number,
-    endereco: String,
-    convidados: String 
+    endereco: String
+
 
 });
 
