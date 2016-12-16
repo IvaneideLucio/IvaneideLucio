@@ -7,10 +7,9 @@ var EventoSchema = new mongoose.Schema({
     dataFim: String,
     local: String,
     tag: String,
-    convidados: String,    
+    convidados: [],    
     cep: Number,
     endereco: String
-
 
 });
 
