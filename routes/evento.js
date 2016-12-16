@@ -7,9 +7,9 @@ var Evento = require('../models/Evento.js');
 
 /* GET /evento Listagem de eventos */
 router.route('/').get(auth, function(req, res, next) {
-  Evento.find(function (err, usuario) {
+  Evento.find(function (err, evento) {
     if (err) return next(err);
-    res.json(usuario);
+    res.json(evento);
   });
 });
 
