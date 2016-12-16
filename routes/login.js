@@ -4,19 +4,19 @@ var jwt = require('jsonwebtoken');
 var secretKey = "e>@O103o&0ix-sbkzAr8439+jE5p^C";
 var router = express.Router();
 
+var Usuario = require('../models/Usuario.js');
 
-var Evento = require('../models/Evento.js');
 
 router.post('/', function (req, res, next) {
-    Evento.findOne({login: req.body.username, senha: req.body.password}, 'login')
-            .exec(function (err, evento) {
+    Usuario.findOne({login: req.body.username, senha: req.body.password}, 'login')
+            .exec(function (err, usuario) {
                 if (err)
                     res.send(err);
-                if (evento !== null) {
-                    var token = jwt.sign(evento, secretKey, {
+                if (usuario !== null) {
+                    var token = jwt.sign(usuario, secretKey, {
                         expiresIn: "1 day"
                     });
-                    res.json({evento: evento, token: token});
+                    res.json({usuario: usuario, token: token});
                 } else {
                     res.status(400).send('Login/Senha incorretos');
                 }
