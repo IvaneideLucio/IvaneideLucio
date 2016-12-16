@@ -3,9 +3,9 @@ var mongoose = require('mongoose');
 var UsuarioSchema = new mongoose.Schema({
   nome: String,
   idade: Number,
-  perfil:{nome:String},
-  cep:Number,
-  endereco: String,
+  perfil:{
+  	 nome:String
+  },
   login:String,
   senha:String
 });
