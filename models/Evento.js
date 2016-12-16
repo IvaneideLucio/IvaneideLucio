@@ -9,7 +9,7 @@ var EventoSchema = new mongoose.Schema({
     local: String,
     cep: Number,
     endereco: String,
-    convidados: {nome:String} //como definir vários convidados???
+    convidados: {nome:String} 
 
 });
 
