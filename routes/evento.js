@@ -7,7 +7,7 @@ var Evento = require('../models/Evento.js');
 
 
 /* GET /evento Listagem de eventor. */
-router.route('/').get(auth, function(req, res, next) { //auth para autenticação
+router.route('/').get(auth, function(req, res, next) { 
   Evento.find(function (err, evento) {
     if (err) return next(err);
     res.json(evento);
