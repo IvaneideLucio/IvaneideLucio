@@ -6,7 +6,8 @@ var EventoSchema = new mongoose.Schema({
   dataInicio: String,
   dataFim: String,
   local: String,
-  tag: String
+  tag: String,
+  convidados: String //como definir vários convidados???
   
   
  
