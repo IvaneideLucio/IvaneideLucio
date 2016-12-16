@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var auth = require('./auth');
+
 
 var Evento = require('../models/Evento.js');
 
 
 /* GET /evento Listagem de eventos */
-router.route('/').get(auth, function(req, res, next) {
+router.get('/', function(req, res, next) {
   Evento.find(function (err, evento) {
     if (err) return next(err);
     res.json(evento);
