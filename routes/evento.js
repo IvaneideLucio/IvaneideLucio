@@ -5,14 +5,14 @@ var auth = require('./auth');
 var Evento = require('../models/Evento.js');
 
 
-
-/* GET /evento Listagem de eventor. */
-router.route('/').get(auth, function(req, res, next) { 
-  Evento.find(function (err, evento) {
+/* GET /evento Listagem de eventos */
+router.route('/').get(auth, function(req, res, next) {
+  Evento.find(function (err, usuario) {
     if (err) return next(err);
-    res.json(evento);
+    res.json(usuario);
   });
 });
+
 
 /* POST /evento Cadastro de evento */
 router.post('/', function(req, res, next) {
